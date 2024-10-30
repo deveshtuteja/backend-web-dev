@@ -9,12 +9,13 @@ var b = 292843;
 
 https.get("https://dummyjson.com/products/1", (res) => {
     console.log("Fetched data successfully");
-
 })
 
 setTimeout(() => {
     console.log("Set timeout ran successfully after 5 seconds");
 }, 5000);
+
+//fs.readFileSync is a synchronous code. It blocks the main thread. Not advisable to use as a dev. 
 
 fs.readFile("./file.txt", "utf8", (err, data) => {
     console.log("File Data:", data);

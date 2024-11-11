@@ -23,13 +23,23 @@ async function main() {
     // console.log('Inserted documents =>', insertResult);
 
     // the following code examples can be pasted here...
-    const findResult = await collection.find({}).toArray();
-    console.log('Found documents =>', findResult);
+    // const findResult = await collection.find({}).toArray();
+    // console.log('Found documents =>', findResult);
 
-    const countResult = await collection.countDocuments({});
-    console.log("found documents=> ", countResult);
+    // const countResult = await collection.countDocuments({});
+    // console.log("found documents=> ", countResult);
+
+    // const del = await collection.deleteOne({ firstname: "Virat" });
 
     //find all documents with a filter of first name => Virat
+    // const result = await collection.find({ firstname: "Virat" }).toArray();
+    // //find returns us a cursor
+    // console.log("Result=>", result);
+
+    const updateResult = await collection.updateOne({ firstname: "Akaay" }, { $set: { firstname: "Virat" } });
+
+
+
 
 
     return 'done.';

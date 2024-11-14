@@ -38,10 +38,6 @@ async function main() {
 
     const updateResult = await collection.updateOne({ firstname: "Akaay" }, { $set: { firstname: "Virat" } });
 
-
-
-
-
     return 'done.';
 }
 
